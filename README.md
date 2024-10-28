@@ -3,14 +3,15 @@
 ## Directions
 1. Install [Ollama](https://ollama.com/) to run LLMs locally on your Mac.  OpenAI API keys wear out fast and get expensive.  Your laptop is pretty powerful and can do a lot of this already.
 2. Once it's installed, launch it in the terminal with `ollama run llama3.1`.  This will start the server and you can access it at `http://localhost:11434` or on the command line.  This model works is a general purpose one that works well enough and seems appropriately sized to also build containers on the laptop.
-3. Build the `Dockerfile` and run it.
+3. Make sure Podman is running on your machine
+4. Build the `Dockerfile` and run it.
 
     ```shell
-    docker build -t test .
-    docker run --rm -it test
+    podman build -t test .
+    podman run --rm -it test
     ```
 
-4. Chat with your bot.  This should get you some nice output, as shown below:
+5. Chat with your bot.  This should get you some nice output, as shown below:
 
     ```plaintext
     Chatbot is running! Type 'exit' to stop.
